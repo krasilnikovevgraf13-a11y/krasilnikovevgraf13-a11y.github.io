@@ -3,31 +3,9 @@ html{scroll-behavior:smooth}
 body{margin:0;font-family:Verdana,Arial,sans-serif;font-size:17px;line-height:1.6;background:#f5f7fb;color:#182230;transition:.25s}
 a{color:inherit}
 .container{width:min(1120px,92%);margin:auto}
-.top-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
-    z-index: 9999;
-    background: #fff;
-    border-bottom: 1px solid #e4e8ef;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-}
+.top-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid #e4e8ef}
 .nav{min-height:70px;display:flex;align-items:center;gap:24px}
-.brand {
-    font-size: 22px;
-    font-weight: 800;
-    text-decoration: none;
-    color: #000;              /* чёрный текст */
-    position: relative;        /* чтобы текст был поверх фона */
-    z-index: 1;
-    display: inline-block;     /* чтобы не «схлопывался» */
-    line-height: 1.2;
-    -webkit-tap-highlight-color: transparent; /* убирает серую вспышку на телефоне при тапе */
-}
+.brand{font-size:22px;font-weight:800;text-decoration:none;margin-right:auto}
 
 
 /* Стили для мобильных устройств */
