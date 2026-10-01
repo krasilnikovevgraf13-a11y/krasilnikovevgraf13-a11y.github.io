@@ -1,0 +1,30 @@
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Verdana,Arial,sans-serif;font-size:17px;line-height:1.6;background:#f5f7fb;color:#182230;transition:.25s}
+a{color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+.top-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid #e4e8ef}
+.nav{min-height:70px;display:flex;align-items:center;gap:24px}
+.brand{font-size:22px;font-weight:800;text-decoration:none;margin-right:auto}
+
+
+/* Стили для мобильных устройств */
+@media (max-width: 768px) {
+    .element {
+        font-size: 16px;
+    }
+}
+
+/* Стили для планшетов */
+@media (min-width: 768px) {
+    .element {
+        width: 50%;
+    }
+}
+
+/* Стили для десктопов */
+@media (min-width: 1200px) {
+    .element {
+        width: 33.333%;
+    }
+}
