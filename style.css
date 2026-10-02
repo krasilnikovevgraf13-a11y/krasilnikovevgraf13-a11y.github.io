@@ -13,41 +13,100 @@ img {
 }
 body{margin:0;font-family:Verdana,Arial,sans-serif;font-size:17px;line-height:1.6;background:#f5f7fb;color:#182230;transition:.25s }
 
-.top-headerd {
+/* ===== ОДИНАКОВАЯ ШАПКА ДЛЯ INDEX И MY PROGECT ===== */
+
+.top-headerd,
+.top-header {
     position: fixed;
     top: 0;
     left: 0;
+
     width: 100%;
-    height: 70px;
+    height: 80px;
+
     z-index: 9999;
-    background: #fff;
+
+    background: #ffffff;
+
     border-bottom: 1px solid #e4e8ef;
+
     display: flex;
     align-items: center;
-    padding: 0 20px;
+
+    padding: 0;
 }
 
-.brandd {
-    font-size: 22px;
-    font-weight: 800;
-    text-decoration: none;
-    color: #000;              /* чёрный текст */
-    position: relative;        /* чтобы текст был поверх фона */
-    z-index: 1;
-    display: inline-block;     /* чтобы не «схлопывался» */
+
+/* Контейнер */
+
+.top-headerd .container,
+.top-header .container {
+    width: min(1120px, 92%);
+    max-width: none;
+
+    height: 100%;
+
+    margin: 0 auto;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* Название сайта */
+
+.brandd,
+.brand {
+    display: inline-block;
+
+    margin: 0;
+    padding: 0;
+
+    font-family: Verdana, Arial, sans-serif;
+
+    font-size: 30px;
     line-height: 1.2;
-    -webkit-tap-highlight-color: transparent; /* убирает серую вспышку на телефоне при тапе */
+
+    font-weight: 700;
+
+    color: #182230 !important;
+
+    text-decoration: none !important;
 }
 
-/* фиксируем цвет при любых состояниях */
-.brandd:link,
-.brandd:visited,
+
+/* Убираем изменение цвета при наведении */
+
 .brandd:hover,
+.brand:hover,
 .brandd:focus,
-.brandd:active {
-    color: #000;
-    text-decoration: none;
-    font-weight: 800;
+.brand:focus,
+.brandd:active,
+.brand:active {
+    color: #182230 !important;
+    text-decoration: none !important;
+}
+
+
+/* Телефон */
+
+@media (max-width: 768px) {
+
+    .top-headerd,
+    .top-header {
+        height: 70px;
+    }
+
+    .top-headerd .container,
+    .top-header .container {
+        width: 92%;
+    }
+
+    .brandd,
+    .brand {
+        font-size: 24px;
+    }
 }
 .welcome .container{
     padding: 40px;
